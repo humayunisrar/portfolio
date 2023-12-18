@@ -1,6 +1,7 @@
-import {Suspense} from 'react'
+import {useState,Suspense} from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
+
 import Island from '../models/Island'
 import Sky from '../models/Sky'
 import Bird from '../models/Bird'
@@ -11,6 +12,7 @@ import Plane from '../models/Plane'
 // </div>
 
 const Home = () => {
+  const [isRotating, setIsRotating] = useState(false);
 
   const adjustIslandForScreenSize = () =>{
 
@@ -29,11 +31,30 @@ const Home = () => {
     }
     return [screenPostion,screenScale,rotation];
   }
+
+  const adjustPlaneForScreenSize = () =>{
+
+    let screenScale, screenPostion; 
+    
+    if(window.innerWidth < 768){
+
+      screenScale=[1.5,1.5,1.5];
+      screenPostion=[0, -1.5, 0];
+
+    } else{
+
+      screenScale=[3,3,3];
+      screenPostion=[0,-4,-4];
+
+    }
+    return [screenPostion,screenScale,rotation];
+  }
+
   const[islandPostion, islandScale, islandRotation]= adjustIslandForScreenSize();
 
   return (
     <section className='w-full h-screen relative'>
-    <Canvas className='w-full h-screen bg-transparent'
+    <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
     camera={{near:0.1, far:100}}>
 
       <Suspense fallback={<Loader/>}>
@@ -42,14 +63,15 @@ const Home = () => {
         <hemisphereLight skyColor='#b1eff' groundColor='#000000' intensity={1}/>
        
        <Bird/>
-       
-       <Sky />
+       <Sky/>
 
         <Island
         
         position={islandPostion}
         scale={islandScale}
         rotation={islandRotation}
+        isRotating={isRotating}
+        setIsRotating={setIsRotating}
         />
         <Plane/>
       </Suspense>
