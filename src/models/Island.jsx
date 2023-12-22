@@ -23,7 +23,7 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
   const dampingFactor = 0.95;
 
   const handlePointerDown = (e) =>{
-    e.stopProgation();
+    e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
 
@@ -33,23 +33,23 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
   }
 
   const handlePointerUp = (e) =>{
-    e.stopProgation();
+    e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
-    const clientX=e.touches ? e.touches[0].clientX : e.clientX;
+    
+  }
+
+  const handlePointerMove = (e) =>{
+    e.stopPropagation();
+    e.preventDefault();
+
+    if(isRotating){
+      const clientX=e.touches ? e.touches[0].clientX : e.clientX;
     const delta =(clientX - lastX.current) / viewport.width;
 
     islandRef.current.rotation.y += delta * 0.01* Math.PI;
     lastX.current =clientX;
     rotationSpeed.current =delta * 0.01* Math.PI;
-  }
-
-  const handlePointerMove = (e) =>{
-    e.stopProgation();
-    e.preventDefault();
-
-    if(isRotating){
-      handlePointerUp(e);
     }
   }
 
@@ -79,9 +79,7 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
       }
     }else{
       const rotation = islandRef.current.rotation.y;
-    }
-    const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       // Set the current stage based on the island's orientation
       switch (true) {
@@ -100,6 +98,8 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
         default:
           setCurrentStage(null);
       }
+    }
+  
   })
 
   useEffect(() => {
