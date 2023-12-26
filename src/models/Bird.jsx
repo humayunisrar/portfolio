@@ -14,6 +14,7 @@ const Bird = () => {
   actions['Take 001'].play();
 
   }, []);
+  
 
 useFrame(({clock, camera}) =>{
   birdRef.current.rotation.y += Math.sin (clock.elapsedTime)* 0.2 +2;
