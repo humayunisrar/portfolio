@@ -22,14 +22,19 @@ const Bird = () => {
       if (birdRef.current.position.x > camera.position.x + 10) {
      
       birdRef.current.rotation.y = Math.PI;
+
     } else if (birdRef.current.position.x < camera.position.x - 10) {
       
       birdRef.current.rotation.y = 0;
+
     }
+
     if (birdRef.current.rotation.y === 0) {
       birdRef.current.position.x += 0.01;
       birdRef.current.position.z -= 0.01;
+      
     } else {
+
       birdRef.current.position.x -= 0.01;
       birdRef.current.position.z += 0.01;
     }
