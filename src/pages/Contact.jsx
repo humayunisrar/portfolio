@@ -9,16 +9,26 @@ const Contact = () => {
   const formRef= useRef(null);
   const [form, setForm] = useState({name: '', email: '', message: ''});
   const [isLoading, setIsLoading] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState('idle');
 
   const handleChange = (e) => {
+
     const {name, value} = e.target;
     setForm({...form, [name]: value});
   };
-  const handleFocus = () => {};
-  const handleBlur = () => {};
+
+  const handleFocus = () => {
+    setCurrentAnimation('walk');
+  };
+
+  const handleBlur = () => {
+    setCurrentAnimation('idle');
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setCurrentAnimation('hit');
   
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -38,9 +48,15 @@ const Contact = () => {
       // TODO show success
 
       //TODO Hide an alert
+      setTimeout(() => {
+        setCurrentAnimation('idle');
+        setForm({name: '', email: '', message: ''});
+      },[5000])
+
     }).catch(()=>{
       setIsLoading(false);
-      // console.log(error);
+      console.log(error);
+      setCurrentAnimation('idle');
     }) 
   };
 
@@ -69,9 +85,9 @@ const Contact = () => {
          
          <label className='text-black-500 font-semibold'>Email</label>
           <input 
-          className='email'
+          className='input'
           name='email'
-          type='text'
+          type='email'
           placeholder='Enter your Email'
           required
           value={form.email}
@@ -117,6 +133,7 @@ const Contact = () => {
        
         <Suspense fallback={<Loader/>}>
           <Fox
+          currentAnimation={currentAnimation}
           position={[0, 0.35, 0]}
           rotation={[12.6, -0.65,0]}
           scale={[0.5, 0.5, 0.5]}
