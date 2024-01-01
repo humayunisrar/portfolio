@@ -1,8 +1,36 @@
 import React from 'react'
+import { skills } from '../constants'
+
 
 const About = () => {
   return (
-    <div>About</div>
+   <section className='max-container'>
+
+    <h1 className='head-text'>Hello, I'm <span className='blue-gradient_text font-semibold drop-shadow'>Humayun</span></h1>
+  
+    <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+      <p>
+      Website Developer based in Pakistan, specializing in Wordpress and React.js through hands-on learning and building applications.
+
+      </p>
+    </div>
+
+    <div className='py-10 flex flex-col'>
+      <h3 className='subhead-text'>My Skills</h3>
+      <div className='mt-16 flex flex-wrap gap-12'>
+
+        {skills.map(skill => (
+          <div>
+            <div>
+            <img src={skill.imageUrl} alt={skill.name} className='w-1/2 h-1/2 object-contain'/>
+            </div>
+            </div>
+        ))}
+
+      </div>
+    </div>
+   </section>
+
   )
 }
 
