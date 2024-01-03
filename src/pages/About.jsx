@@ -2,6 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import React from 'react'
 import { skills, experiences } from '../constants'
+import CTA from '../components/CTA';
 
 
 const About = () => {
@@ -40,12 +41,18 @@ const About = () => {
 
           <VerticalTimeline>
             {experiences.map(experience => (
-              <VerticalTimelineElement key={experience.company_name } date={experience.date} icon={<div className='flex justify-center items-center w-full h-full'>
+              <VerticalTimelineElement 
+               key={experience.company_name } 
+               date={experience.date} 
+               icon={
+
+               <div className='flex justify-center items-center w-full h-full'>
                 <img src={experience.icon}
                 alt={experience.company_name}
                 className='w-[60%] h-[60%] object-contain'
                 />
               </div>} 
+
               iconStyle={{
                 background: experience.iconBg,
                 boxShadow: 'none',
@@ -80,6 +87,8 @@ const About = () => {
       </div>
     </div>
 </div>
+<hr className='border-slate-200 '/> 
+<CTA/>
    </section>
   )}
 
