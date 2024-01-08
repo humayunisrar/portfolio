@@ -20,25 +20,23 @@ const Projects = () => {
      {projects.map((project) => (
 
       <div className='lg:w-[400px] w-full'key={project.name}> 
-        <div className='block-container w-12 h-12 '>
-          <div className={`btn-back rounded-xl ${project.theme}`}/>
-           <div className='btn-front rounded-xl flex justify-center items-center'>
+       <a href={project.link}  target='_blank'
+          rel='noopener noreferrer'>
              <img 
                   src={project.iconUrl} 
                   alt='Project Icon'
-                  className='w-1/2 h-1/2 object-contain'
+                  className='w-[75%] h-[60%] object-contain'
                    />
-      
-      </div>
-      </div>
-      <div className=' mt-5 flex flex-col'>
+                   </a>
+     
+      <div className=' mt-2 flex flex-col'>
         <h4 className='text-2xl font-poppins font-semibold'>
           {project.name}
         </h4>
         <p className='mt-2 text-slate-500'>
           {project.description}
         </p>
-        <div className='mt-5 flex items-center gap-2 font-poppins'>
+        <div className='mt-5 flex items-center gap-2 font-poppins mb-5'>
           <Link
           to={project.link}
           target='_blank'
@@ -53,8 +51,7 @@ const Projects = () => {
       </div>
     ))}
     </div>
-    <hr className='border-slate-200'>
-    </hr>
+    <hr className='border-slate-200 mt-[180px]'/>
     <CTA/>
     </section>
   )

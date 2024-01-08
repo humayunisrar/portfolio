@@ -27,6 +27,10 @@ import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import wordpress from './wordpress.svg'
+import nextgen from './nextgen.jpg'
+import seniorinv from './seniorinv.jpg'
+import sleet from './sleet.jpg'
+
 
 export {
     css,
@@ -57,5 +61,8 @@ export {
     arrow,
     contact,
     soundon,
+    nextgen,
+    seniorinv,
+    sleet,
     soundoff
 }

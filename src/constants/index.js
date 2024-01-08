@@ -16,6 +16,9 @@ import {
     summiz,
     tailwindcss,
     threads,
+    nextgen,
+    seniorinv,
+    sleet,
   
 } from "../assets/icons";
 
@@ -133,45 +136,25 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
+        iconUrl: seniorinv,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Senior Investigators ',
+        description: 'Senior Investigations is a reputable Gold Coast-based private investigation agency specializing in a wide range of investigation services including background checks, factual investigations, surveillance, and skip tracing.',
+        link: 'https://seniorinvestigations.com.au/',
     },
     {
-        iconUrl: car,
+        iconUrl: sleet,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Sleet',
+        description: 'Sleet is the pioneering cold store logistics solution to be Saudi Arabia based that changes the way that logistics operates by relentless innovation and digitalized approaches.',
+        link: 'https://sleet-app.netlify.app/',
     },
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        iconUrl: nextgen,
+        theme: 'btn-back-green',
+        name: 'NextGen-Women ',
+        description: 'NextGen Women empower women to succeed by providing them with the resources and support they need to advance their careers. They believe that women have unique perspectives and experiences that can drive innovation and change in the workplace, and they are committed to helping them realize their full potential.',
+        link: 'https://nextgen-women.com/',
+    
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
 ];

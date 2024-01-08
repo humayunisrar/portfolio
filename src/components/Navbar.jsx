@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <header className='header'>
-        <NavLink to="/" className="w-12 h-11 rounded-lg bg-white items-center justify-center flex shadow-md p-1">
+        <NavLink to="/" className="w-[80px] h-[60px]  rounded-lg items-center justify-center flex shadow-md p-3">
             <img src="/logo.svg" alt="logo" />
         </NavLink>
 
