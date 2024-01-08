@@ -103,7 +103,7 @@ export const experiences = [
         company_name: "",
         icon: html,
         iconBg: "#fbc3bc",
-        date: "Jan 2023 - Present",
+        date: "1 Year",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -122,7 +122,7 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/humayunisrar',
     },
     {
         name: 'LinkedIn',
