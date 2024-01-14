@@ -1,21 +1,16 @@
+import { Link } from 'react-router-dom';
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-    car,
     contact,
     css,
-    estate,
     git,
     github,
     html,
     javascript,
     linkedin,
-    pricewise,
     react,
     wordpress,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
     nextgen,
     seniorinv,
     sleet,
@@ -69,10 +64,12 @@ export const experiences = [
         iconBg: "#e4e4e4",
         date: "2 Years",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Managed and maintained customized WordPress websites, ensuring optimal performance and functionality.",
+            "Utilized pre-built WordPress themes and plugins to implement responsive design for improved user experience.",
+            "Ensured cross-browser compatibility and optimized website performance for seamless user interaction.",
+            "Stayed updated on the latest WordPress developments, incorporating new features into ongoing projects.",
+            "Addressed and resolved issues related to website functionality, performance, and security.",
+            "Collaborated with clients to understand their unique requirements and provided website management solutions to meet their business goals & Contributed to the planning and execution of WordPress projects, adhering to timelines and project requirements.",  
         ],
     },
     {
@@ -82,10 +79,10 @@ export const experiences = [
         iconBg: "#d2e9fe",
         date: "6 Months",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Applied knowledge of JavaScript basics to implement functionality and features within React.js applications. Demonstrated familiarity with React hooks, leveraging them to manage state and side effects efficiently.",
+            "Completed two demo projects using React.js, showcasing proficiency in building interactive and dynamic user interfaces, also Successfully delivered a client project using React.js, meeting client requirements and ensuring a positive user experience.",
+            "Implemented responsive design principles in React.js projects for a consistent user experience across devices, addressed and resolved issues related to React.js application functionality and performance.",
+            "Contributed to the planning and execution of React.js projects, adhering to timelines and project requirements.",
         ],
     },
     {
@@ -95,10 +92,10 @@ export const experiences = [
         iconBg: "#d2e9fe",
         date: "6 Months",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Utilized Tailwind CSS to streamline and expedite the styling process in web development projects, and demonstrated proficiency in creating responsive and visually appealing user interfaces using Tailwind CSS utility classes.",
+            "Implemented design specifications and translated them into clean and maintainable Tailwind CSS code.",
+            "Worked on projects that showcased the flexibility and efficiency of Tailwind CSS for styling web applications.",
+            "Incorporated Tailwind CSS into React.js projects, creating cohesive and visually consistent UI components.",
         ],
     },
     {
@@ -108,10 +105,11 @@ export const experiences = [
         iconBg: "#fbc3bc",
         date: "1 Year",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed and maintained modern and semantic HTML5 markup for web applications, integrating responsive design principles to ensure a seamless user experience across various devices.",
+            "Utilized HTML5 features, such as the <canvas> element for dynamic graphics and animations, also demonstrated proficiency in structuring web content with HTML5 elements.",
+            "Created visually appealing and consistent user interfaces using CSS3 styling techniques, applying transitions and animations to enhance user interactions.",
+            "Developed and maintained React.js projects, utilizing React hooks, responsive design, and integrating Tailwind CSS for cohesive UI components.",
+            "Addressed and resolved issues related to website functionality, performance, and styling in HTML5, CSS3, React.js, and Tailwind CSS projects.",
         ],
     },
 ];
@@ -120,7 +118,7 @@ export const socialLinks = [
     {
         name: 'Contact',
         iconUrl: contact,
-        link: '/contact',
+        link: 'tel:+923363204705',
     },
     {
         name: 'GitHub',
@@ -157,4 +155,5 @@ export const projects = [
         link: 'https://nextgen-women.com/',
     
     },
+    
 ];
